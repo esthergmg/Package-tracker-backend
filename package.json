@@ -1,0 +1,45 @@
+{
+  "name": "package-tracker-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^16.18.0",
+    "npm": ">= 8.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "npm run set-dev && nodemon -r nodemon -r dotenv/config ./",
+    "start": "node -r dotenv/config ./",
+    "lint": "./node_modules/.bin/eslint src/",
+    "set-dev": "bash set-env.sh dev",
+    "set-preprod": "bash set-env.sh preprod",
+    "set-prod": "bash set-env.sh prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.0",
+    "socket.io": "^4.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.1.2",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.7.1"
+  }
+}
